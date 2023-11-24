@@ -61,5 +61,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: bin/Release/Server Service.exe
-        asset_name: IMSClient.exe  
+        asset_name: IMSServer.exe  
         asset_content_type: application/octet-stream
