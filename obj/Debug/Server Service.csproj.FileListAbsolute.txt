@@ -6,3 +6,5 @@ C:\Users\SHANY\Desktop\IMS_Service\Server Service\obj\Debug\Server Service.cspro
 C:\Users\SHANY\Desktop\IMS_Service\Server Service\obj\Debug\Server Service.csproj.CoreCompileInputs.cache
 C:\Users\SHANY\Desktop\IMS_Service\Server Service\obj\Debug\Server Service.exe
 C:\Users\SHANY\Desktop\IMS_Service\Server Service\obj\Debug\Server Service.pdb
+C:\Users\SHANY\Desktop\IMS_Service\Server Service\obj\Debug\Server_Service.ProjectInstaller.resources
+C:\Users\SHANY\Desktop\IMS_Service\Server Service\obj\Debug\Server Service.csproj.GenerateResource.cache
