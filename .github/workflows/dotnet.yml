@@ -17,7 +17,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: WindowsService1.sln                         
+      Solution_Name: Server Service.sln                         
       
     steps:
     - name: Checkout repository
