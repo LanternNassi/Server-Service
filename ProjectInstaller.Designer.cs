@@ -33,6 +33,7 @@
             // 
             // IMSProcessInstaller
             // 
+            this.IMSProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.IMSProcessInstaller.Password = null;
             this.IMSProcessInstaller.Username = null;
             // 
