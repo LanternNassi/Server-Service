@@ -9,8 +9,16 @@ on:
 
 jobs:
   build:
+  
+    strategy:
+        matrix:
+          configuration: [Release]
+          
     runs-on: windows-latest
 
+    env:
+      Solution_Name: WindowsService1.sln                         
+      
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -18,12 +26,18 @@ jobs:
     - name: Set up .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1'  # Change to the version of .NET you're using
+        dotnet-version: '6.0.x'  # Change to the version of .NET you're using
 
-    - name: Build Windows service
-      run: |
-        dotnet restore
-        dotnet build --configuration Release
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1.1
+      with:
+        msbuild-architecture: x64
+        
+    - name: Restore the application
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+      env:
+        Configuration: ${{ matrix.configuration }}
+
   release:
     needs: build
     runs-on: ubuntu-latest  # You can use a different OS for releasing
@@ -36,7 +50,7 @@ jobs:
       uses: alexvingg/next-release-tag@v1.0.4
       with:
         github_token: ${{ secrets.ACCESS_KEY }}
-        tag_prefix: ''
+        tag_prefix: 'Server'
 
 
     - name: Create Release
@@ -50,7 +64,8 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          bin/Release/Server Service.exe
+          bin/Release/WindowsService1.exe
+
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@v1
@@ -58,6 +73,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ACCESS_KEY }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: bin/Release/Server Service.exe
+        asset_path: bin/Release/WindowsService1.exe
         asset_name: IMSServer.exe  
         asset_content_type: application/octet-stream
