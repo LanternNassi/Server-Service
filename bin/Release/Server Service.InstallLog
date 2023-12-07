@@ -1,0 +1,18 @@
+﻿Installing assembly 'C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.exe'.
+Affected parameters are:
+   assemblypath = C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.exe
+   logfile = C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.InstallLog
+Installing assembly 'C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.exe'.
+Affected parameters are:
+   assemblypath = C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.exe
+   logfile = C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.InstallLog
+Installing service IMSSERVER...
+Service IMSSERVER has been successfully installed.
+Creating EventLog source IMSSERVER in log Application...
+See the contents of the log file for the C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.exe assembly's progress.
+The file is located at C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.InstallLog.
+Committing assembly 'C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.exe
+   logfile = C:\Users\SHANY\Desktop\IMS_Service\Server Service\bin\Release\Server Service.InstallLog
